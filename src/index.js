@@ -472,7 +472,7 @@ class Offline {
             const contentTypesThatRequirePayloadParsing = ['application/json', 'application/vnd.api+json'];
             if (contentTypesThatRequirePayloadParsing.indexOf(contentType) !== -1) {
               try {
-                request.payload = JSON.parse(request.payload);
+                request.payload = request.payload;
               }
               catch (err) {
                 debugLog('error in converting request.payload to JSON:', err);
